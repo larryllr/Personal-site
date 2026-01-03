@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>管理｜宽宽的网站</title>
+  <meta name="description" content="本地编辑内容并导出 JSON 上传到 GitHub。" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="stylesheet" href="/assets/admin.css" />
+</head>
+<body>
+  <div data-include="header"></div>
+
+  <main class="container">
+    <section class="card">
+      <h1>管理页</h1>
+      <p class="muted">
+        这是一个“像做 PPT 一样”的简单编辑器：改首页卡片与项目列表，实时预览；保存到浏览器；最后导出 <code>content.json</code>，
+        覆盖上传到仓库的 <code>/data/content.json</code> 即可更新网站。
+      </p>
+      <div class="kv">
+        <span class="badge">不需要数据库</span>
+        <span class="badge">不需要登录</span>
+        <span class="badge">纯静态可用</span>
+      </div>
+    </section>
+
+    <div style="height:14px"></div>
+
+    <div class="admin-layout">
+      <aside class="card">
+        <h2>内容区</h2>
+        <div class="admin-buttons">
+          <button class="btn" id="btnLoadSite" type="button">从站点加载</button>
+          <button class="btn" id="btnLoadLocal" type="button">从本地草稿</button>
+          <button class="btn" id="btnSaveLocal" type="button">保存草稿</button>
+          <button class="btn" id="btnExport" type="button">导出 content.json</button>
+        </div>
+        <hr/>
+        <h3>首页卡片</h3>
+        <div id="homeList" class="admin-list"></div>
+        <div class="admin-buttons">
+          <button class="btn" id="btnAddHome" type="button">+ 新增卡片</button>
+        </div>
+        <hr/>
+        <h3>项目</h3>
+        <div id="projList" class="admin-list"></div>
+        <div class="admin-buttons">
+          <button class="btn" id="btnAddProj" type="button">+ 新增项目</button>
+        </div>
+      </aside>
+
+      <section class="card">
+        <h2>编辑（选中左侧一项来编辑）</h2>
+        <div id="editorEmpty" class="muted">请选择左侧的某一项。</div>
+        <form id="editor" class="admin-editor" hidden>
+          <input type="hidden" id="editKind" />
+          <input type="hidden" id="editIndex" />
+
+          <label>标题</label>
+          <input id="editTitle" />
+
+          <div style="height:10px"></div>
+          <label>内容（支持换行）</label>
+          <textarea id="editBody" rows="8"></textarea>
+
+          <div id="projExtras" hidden>
+            <div style="height:10px"></div>
+            <label>链接（可选）</label>
+            <input id="editLink" placeholder="https://..." />
+            <div style="height:10px"></div>
+            <label>图片（可选，填 /assets/xxx.png 或外链）</label>
+            <input id="editImage" placeholder="/assets/demo.png" />
+            <div style="height:10px"></div>
+            <label>标签（可选，用逗号分隔）</label>
+            <input id="editTags" placeholder="Web, 学习" />
+          </div>
+
+          <div style="height:12px"></div>
+          <div class="admin-buttons">
+            <button class="btn" type="button" id="btnUp">上移</button>
+            <button class="btn" type="button" id="btnDown">下移</button>
+            <button class="btn" type="button" id="btnDelete">删除</button>
+            <span style="flex:1"></span>
+            <button class="btn" type="button" id="btnApply">应用到列表</button>
+          </div>
+        </form>
+
+        <div style="height:14px"></div>
+        <h2>预览</h2>
+        <p class="muted">预览使用你当前编辑的数据（未导出也能预览）。</p>
+        <iframe id="preview" class="admin-preview" title="preview"></iframe>
+      </section>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/assets/config.js"></script>
+  <script src="/assets/main.js"></script>
+  <script src="/assets/admin.js"></script>
+</body>
+</html>

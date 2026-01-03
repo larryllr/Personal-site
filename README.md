@@ -1,4 +1,4 @@
-# 宽宽的育才网站（纯静态 + Cloudflare Pages）
+# 宽宽的网站（纯静态 + Cloudflare Pages）
 
 这是一套“路线 1：纯静态 HTML/CSS/JS”的个人站模板，已经包含：
 - 响应式布局
@@ -15,7 +15,7 @@
 ## 1. 你要改哪些地方？
 
 ### A) 站点名字（全站）
-- 已设置为：**宽宽的育才网站**
+- 已设置为：**宽宽的网站**
 - 如果要改：
   - `partials/header.html` 里的站名
   - 各页面 `<title>`（index/about/projects/blog/posts）
@@ -143,3 +143,22 @@
 技术实现：
 - `/assets/config.js` 负责读取 `/config.json`
 - `/assets/main.js` 在注入 header/footer 后，用 config 替换站名、导航与社交链接，并按需插入统计脚本
+
+
+---
+
+# 新工作流：像做 PPT 一样改内容
+
+你现在主要改两类文件：
+
+1) `config.json`（站名/导航/社交/功能开关）
+2) `data/content.json`（首页卡片与项目列表）
+
+推荐编辑方式：
+- 打开 `/admin.html` 管理页
+- 编辑 -> 预览
+- 点“导出 content.json”
+- 把导出的文件覆盖上传到仓库：`/data/content.json`
+- 推送到 GitHub 后 Cloudflare Pages 会自动重新部署
+
+> 纯静态站无法在服务器端“直接保存到 GitHub”，所以用“导出 JSON + 覆盖上传”是最稳、最简单的方式。

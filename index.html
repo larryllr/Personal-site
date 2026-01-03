@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>宽宽的育才网站｜首页</title>
-  <meta name="description" content="宽宽的育才网站：个人展示、博客与项目集。" />
-  <meta property="og:title" content="宽宽的育才网站｜首页" />
-  <meta property="og:description" content="宽宽的育才网站：个人展示、博客与项目集。" />
+  <title>宽宽的网站｜首页</title>
+  <meta name="description" content="宽宽的网站：个人展示、博客与项目集。" />
+  <meta property="og:title" content="宽宽的网站｜首页" />
+  <meta property="og:description" content="宽宽的网站：个人展示、博客与项目集。" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#2563eb" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/assets/site.webmanifest" />
-  <link rel="alternate" type="application/rss+xml" title="宽宽的育才网站 RSS" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="宽宽的网站 RSS" href="/feed.xml" />
   <link rel="stylesheet" href="/assets/style.css" />
 
   <!-- Cloudflare Web Analytics（可选）：把你自己的脚本粘贴到这里 -->
@@ -21,71 +21,26 @@
   <div data-include="header"></div>
 <main class="container">
   <section class="card">
-    <h1><span data-site-name>宽宽的育才网站</span></h1>
-    <p class="muted">一个纯静态、可高度自定义的个人网站模板：展示、博客、搜索、RSS、Sitemap、评论、统计、联系表单（带 Turnstile 防机器人）。</p>
-    <div class="grid grid2" style="margin-top:14px">
-      <div class="card">
-        <h3>你可以放什么？</h3>
-        <ul>
-          <li>个人介绍 / 学习经历 / 作品集</li>
-          <li>博客文章（写完一个 HTML 文件 + 更新 posts.json）</li>
-          <li>项目展示（卡片式，适合放链接与截图）</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>快速入口</h3>
-        <p><a href="/blog.html">→ 去博客</a>（带搜索/标签）</p>
-        <p><a href="/projects.html">→ 去项目</a></p>
-        <p><a href="/about.html">→ 去关于</a></p>
-        <p class="muted" style="margin-top:12px">编辑说明见：<code>README.md</code></p>
-      </div>
-    </div>
+    <h1><span id="heroTitle">宽宽的网站</span></h1>
+    <p class="muted" id="heroSubtitle">加载内容中…</p>
   </section>
 
   <div style="height:14px"></div>
+  <section id="homeGrid" class="grid grid3"></section>
 
-  <section class="grid grid3">
-    <div class="card">
-      <h3>暗色模式</h3>
-      <p class="muted">右上角按钮切换，自动记忆。</p>
-    </div>
-    <div class="card">
-      <h3>SEO / 分享卡片</h3>
-      <p class="muted">每个页面都带基础 meta 与 OG。</p>
-    </div>
-    <div class="card">
-      <h3>纯静态部署</h3>
-      <p class="muted">Cloudflare Pages 直接连 GitHub 即可。</p>
-    </div>
-  </section>
-
-  <div style="height:18px"></div>
-
-  <section id="contact" class="card">
-    <h2>联系我</h2>
-    <p class="muted">启用联系表单需要 Cloudflare Pages Functions + Turnstile（见 README）。</p>
-
-    <form method="POST" action="/api/contact">
-      <label>你的邮箱</label>
-      <input name="email" type="email" placeholder="name@example.com" required />
-
-      <div style="height:10px"></div>
-      <label>想说的话</label>
-      <textarea name="message" rows="6" placeholder="写点什么…" required></textarea>
-
-      <div style="height:10px"></div>
-      <!-- Turnstile（可选）：启用后，把你的 SITE_KEY 填到 data-sitekey -->
-      <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY"></div>
-      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
-      <div style="height:10px"></div>
-      <button class="btn" type="submit">发送</button>
-      <p class="muted">如果你暂时不启用后端，这个表单不会真正提交成功。</p>
-    </form>
+  <div style="height:14px"></div>
+  <section class="card">
+    <h2>使用说明</h2>
+    <ol>
+      <li>打开 <a href="/admin.html">管理页</a>，像做 PPT 一样改首页/项目内容</li>
+      <li>点“导出 JSON”，得到 <code>content.json</code></li>
+      <li>把它覆盖上传到仓库的 <code>/data/content.json</code>，网站就更新了</li>
+    </ol>
   </section>
 </main>
 
-  <div data-include="footer"></div>
+<script src="/assets/runtime.js"></script>
+<div data-include="footer"></div>
   <script src="/assets/config.js"></script>
   <script src="/assets/main.js"></script>
 </body>

@@ -1,0 +1,43 @@
+{
+  "home": {
+    "heroTitle": "宽宽的网站",
+    "heroSubtitle": "一个纯静态、可自定义的个人网站（项目 + 博客）。",
+    "sections": [
+      {
+        "type": "card",
+        "title": "最新动态",
+        "body": "在管理页里像做 PPT 一样改内容，然后导出 JSON 上传到 GitHub。"
+      },
+      {
+        "type": "card",
+        "title": "我在做什么",
+        "body": "这里写你的学习方向、目标、正在做的项目等。"
+      },
+      {
+        "type": "card",
+        "title": "快速入口",
+        "body": "去「项目」看作品集，去「博客」看文章。"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "项目 A",
+      "summary": "一句话简介：这个项目解决了什么问题。",
+      "link": "https://example.com",
+      "tags": [
+        "Web",
+        "学习"
+      ]
+    },
+    {
+      "title": "项目 B",
+      "summary": "一句话简介：这个项目的亮点是什么。",
+      "link": "https://example.com",
+      "tags": [
+        "工具",
+        "Demo"
+      ]
+    }
+  ]
+}

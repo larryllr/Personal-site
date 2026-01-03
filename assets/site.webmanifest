@@ -1,6 +1,6 @@
 {
-  "name": "宽宽的育才网站",
-  "short_name": "宽宽育才",
+  "name": "宽宽的网站",
+  "short_name": "宽宽",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
