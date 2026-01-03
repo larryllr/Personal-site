@@ -41,14 +41,13 @@
     "turnstileSiteKey": "TURNSTILE_SECRET",
     "enableAnalytics": false,
     "cloudflareAnalyticsToken": "YOUR_TOKEN",
-    "enableGiscus": false,
-    "giscus": {
-      "repo": "larryllr/Personal-site",
-      "repoId": "YOUR_REPO_ID",
-      "category": "General",
-      "categoryId": "YOUR_CATEGORY_ID",
-      "mapping": "pathname",
-      "lang": "zh-CN"
-    }
+    "enableGiscus": true,
+  "giscus": {
+    "repo": "larryllr/Personal-site",
+    "repoId": "R_kgDOQzAcqQ",
+    "category": "General",
+    "categoryId": "DIC_kwDOQzAcqc4C0hkk",
+    "mapping": "pathname",
+    "lang": "zh-CN"
   }
 }
