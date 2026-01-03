@@ -1,44 +1,22 @@
 {
   "site": {
-    "name": "宽宽的育才网站",
-    "shortName": "宽宽育才",
-    "url": "https://example.com",
-    "description": "宽宽的育才网站：个人展示、博客与项目集。",
+    "name": "宽宽的网站",
+    "shortName": "宽宽",
+    "url": "https://neyc.de5.net",
+    "description": "没事写个网站玩玩",
     "language": "zh-CN",
     "themeColor": "#2563eb",
     "accent": "#2563eb"
   },
   "nav": [
-    {
-      "text": "关于",
-      "href": "/about.html"
-    },
-    {
-      "text": "项目",
-      "href": "/projects.html"
-    },
-    {
-      "text": "博客",
-      "href": "/blog.html"
-    },
-    {
-      "text": "联系",
-      "href": "/#contact"
-    }
+    { "text": "关于", "href": "/about.html" },
+    { "text": "项目", "href": "/projects.html" },
+    { "text": "博客", "href": "/blog.html" },
+    { "text": "联系", "href": "/#contact" }
   ],
   "social": [
-    {
-      "text": "GitHub",
-      "href": "https://github.com/yourname"
-    },
-    {
-      "text": "B站",
-      "href": "https://space.bilibili.com/xxxx"
-    },
-    {
-      "text": "邮箱",
-      "href": "mailto:you@example.com"
-    }
+    { "text": "GitHub", "href": "https://github.com/larryllr" },
+    { "text": "B站", "href": "https://space.bilibili.com/500609220" }
   ],
   "features": {
     "enableTurnstile": true,
@@ -47,7 +25,7 @@
     "cloudflareAnalyticsToken": "YOUR_TOKEN",
     "enableGiscus": false,
     "giscus": {
-      "repo": "YOUR_GITHUB_NAME/YOUR_REPO",
+      "repo": "larryllr/Personal-site",
       "repoId": "YOUR_REPO_ID",
       "category": "General",
       "categoryId": "YOUR_CATEGORY_ID",
