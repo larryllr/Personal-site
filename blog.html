@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>博客｜宽宽的育才网站</title>
+  <meta name="description" content="博客文章与记录。" />
+  <meta property="og:title" content="博客｜宽宽的育才网站" />
+  <meta property="og:description" content="博客文章与记录。" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
+  <link rel="alternate" type="application/rss+xml" title="宽宽的育才网站 RSS" href="/feed.xml" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Cloudflare Web Analytics（可选）：把你自己的脚本粘贴到这里 -->
+  <!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"YOUR_TOKEN"}'></script> -->
+</head>
+<body>
+  <div data-include="header"></div>
+<main class="container">
+  <h1>博客</h1>
+  <p class="muted">文章列表、标签筛选、站内搜索（全静态）。</p>
+
+  <div class="card">
+    <label>搜索文章</label>
+    <input id="q" placeholder="输入关键词…" />
+    <div style="height:10px"></div>
+    <label>标签筛选</label>
+    <div id="tags" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px"></div>
+  </div>
+
+  <div style="height:14px"></div>
+  <div id="list" class="grid"></div>
+
+  <div style="height:14px"></div>
+  <section class="card">
+    <h3>如何新增文章？</h3>
+    <ol>
+      <li>复制 <code>/posts/hello-world.html</code> 改成你的文章</li>
+      <li>更新 <code>/data/posts.json</code>（标题/日期/摘要/标签/url）</li>
+      <li>可选：更新 <code>sitemap.xml</code> 与 <code>feed.xml</code>（README 有说明）</li>
+    </ol>
+  </section>
+</main>
+<script src="/assets/search.js"></script>
+
+  <div data-include="footer"></div>
+  <script src="/assets/config.js"></script>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

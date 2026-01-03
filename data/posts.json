@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Hello World",
+    "date": "2026-01-03",
+    "summary": "这是第一篇示例文章：你可以复制它作为模板。",
+    "tags": [
+      "随笔",
+      "站点"
+    ],
+    "url": "/posts/hello-world.html"
+  }
+]

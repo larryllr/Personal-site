@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hello World｜宽宽的育才网站</title>
+  <meta name="description" content="第一篇示例文章。" />
+  <meta property="og:title" content="Hello World｜宽宽的育才网站" />
+  <meta property="og:description" content="第一篇示例文章。" />
+  <meta property="og:type" content="article" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <div data-include="header"></div>
+
+  <main class="container">
+    <article class="card">
+      <h1 style="margin-top:0">Hello World</h1>
+      <p class="muted">2026-01-03 · 标签：随笔 / 站点</p>
+      <hr/>
+      <p>这是示例文章页。你可以把它复制成更多文章。</p>
+      <h2>写作建议</h2>
+      <ul>
+        <li>用清晰的小标题</li>
+        <li>文章开头写摘要，方便做 SEO 与列表展示</li>
+        <li>代码用 <code>&lt;pre&gt;&lt;code&gt;</code> 包住</li>
+      </ul>
+      <pre><code>console.log("Hello, world!");</code></pre>
+    </article>
+
+    <div style="height:14px"></div>
+
+    <section class="card">
+      <h2>评论（可选：Giscus）</h2>
+      <p class="muted">把下面的 <code>data-repo</code> 等参数换成你自己的（README 有步骤）。</p>
+
+      <!-- Giscus 评论（可选） -->
+      <script src="https://giscus.app/client.js"
+        data-repo="YOUR_GITHUB_NAME/YOUR_REPO"
+        data-repo-id="YOUR_REPO_ID"
+        data-category="General"
+        data-category-id="YOUR_CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="/assets/config.js"></script>
+  <script src="/assets/main.js"></script>
+</body>
+</html>
