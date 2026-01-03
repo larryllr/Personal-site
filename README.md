@@ -162,3 +162,51 @@
 - 推送到 GitHub 后 Cloudflare Pages 会自动重新部署
 
 > 纯静态站无法在服务器端“直接保存到 GitHub”，所以用“导出 JSON + 覆盖上传”是最稳、最简单的方式。
+
+
+---
+
+# 管理页也能管博客索引（posts.json）
+
+管理页：`/admin.html`
+
+你现在可以在管理页编辑三块内容：
+1) 首页卡片（content.json -> home.sections）
+2) 项目列表（content.json -> projects）
+3) 博客索引（posts.json）
+
+点击“导出”，会同时下载两个文件：
+- `content.json` -> 覆盖上传到 `/data/content.json`
+- `posts.json` -> 覆盖上传到 `/data/posts.json`
+
+注意：
+- 文章正文仍然是 HTML 文件：放在 `/posts/*.html`
+- 管理页里“新增文章索引”只是新增列表项；你需要把文章 HTML 也上传到 `/posts/`
+- 管理页提供了“下载文章模板”，你下载后改名并上传到 `/posts/`，再把 URL 填到文章索引里即可
+
+
+---
+
+# 一键导出完整发布文件（推荐）
+
+管理页点击“导出”后会下载 4 个文件：
+- `content.json` -> 覆盖上传到 `/data/content.json`
+- `posts.json` -> 覆盖上传到 `/data/posts.json`
+- `sitemap.xml` -> 覆盖上传到仓库根目录 `/sitemap.xml`
+- `feed.xml` -> 覆盖上传到仓库根目录 `/feed.xml`
+
+这样更新一次，就能让：首页/项目/博客列表/SEO sitemap / RSS 同步完整可用。
+
+---
+
+# 评论（Giscus）改成“一键开关 + 自动注入”
+
+1) 在 `config.json`：
+- `features.enableGiscus = true`
+- 填好 `features.giscus.repo / repoId / categoryId` 等参数
+
+2) 在任意文章页面里只需要有：
+```html
+<div data-giscus-mount></div>
+```
+本项目已在示例文章和管理页文章模板里自动带上。

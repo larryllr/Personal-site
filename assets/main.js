@@ -57,6 +57,34 @@ async function injectPartials() {
       tsDiv.setAttribute("data-sitekey", ts);
     }
 
+
+    // Giscus（如果启用：自动注入到含有 data-giscus-mount 的页面）
+    const enableG = cfg.features?.enableGiscus;
+    const g = cfg.features?.giscus || {};
+    const mount = document.querySelector("[data-giscus-mount]");
+    if (enableG && mount && g.repo && g.repoId && g.categoryId &&
+        !String(g.repo).includes("YOUR_") && !String(g.repoId).includes("YOUR_") && !String(g.categoryId).includes("YOUR_")) {
+      if (!document.getElementById("giscus-script")) {
+        const s = document.createElement("script");
+        s.id = "giscus-script";
+        s.src = "https://giscus.app/client.js";
+        s.async = true;
+        s.crossOrigin = "anonymous";
+        s.setAttribute("data-repo", g.repo);
+        s.setAttribute("data-repo-id", g.repoId);
+        s.setAttribute("data-category", g.category || "General");
+        s.setAttribute("data-category-id", g.categoryId);
+        s.setAttribute("data-mapping", g.mapping || "pathname");
+        s.setAttribute("data-strict", "0");
+        s.setAttribute("data-reactions-enabled", "1");
+        s.setAttribute("data-emit-metadata", "0");
+        s.setAttribute("data-input-position", "top");
+        s.setAttribute("data-theme", "preferred_color_scheme");
+        s.setAttribute("data-lang", g.lang || "zh-CN");
+        mount.appendChild(s);
+      }
+    }
+
     // Analytics（如果启用）
     const enableA = cfg.features?.enableAnalytics;
     const token = cfg.features?.cloudflareAnalyticsToken;

@@ -37,8 +37,8 @@
     }
   ],
   "features": {
-    "enableTurnstile": false,
-    "turnstileSiteKey": "YOUR_TURNSTILE_SITE_KEY",
+    "enableTurnstile": true,
+    "turnstileSiteKey": "TURNSTILE_SECRET",
     "enableAnalytics": false,
     "cloudflareAnalyticsToken": "YOUR_TOKEN",
     "enableGiscus": false,

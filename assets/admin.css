@@ -8,3 +8,5 @@
 .admin-item.active{outline:2px solid var(--accent)}
 .admin-editor{margin-top:10px}
 .admin-preview{width:100%; height:520px; border:1px solid var(--line); border-radius:14px; background:var(--bg)}
+
+.admin-item .badge{white-space:nowrap}

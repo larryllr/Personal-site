@@ -49,6 +49,16 @@
         <div class="admin-buttons">
           <button class="btn" id="btnAddProj" type="button">+ 新增项目</button>
         </div>
+      
+        <hr/>
+        <h3>博客文章（列表/搜索用）</h3>
+        <p class="muted" style="margin-top:0">文章正文仍在 <code>/posts/*.html</code>，这里管理的是索引 <code>/data/posts.json</code>。</p>
+        <div id="postList" class="admin-list"></div>
+        <div class="admin-buttons">
+          <button class="btn" id="btnAddPost" type="button">+ 新增文章索引</button>
+          <button class="btn" id="btnDownloadPostTpl" type="button">下载文章模板</button>
+        </div>
+
       </aside>
 
       <section class="card">
@@ -76,6 +86,23 @@
             <label>标签（可选，用逗号分隔）</label>
             <input id="editTags" placeholder="Web, 学习" />
           </div>
+
+
+          <div id="postExtras" hidden>
+            <div style="height:10px"></div>
+            <label>日期（YYYY-MM-DD）</label>
+            <input id="editDate" placeholder="2026-01-03" />
+            <div style="height:10px"></div>
+            <label>URL（必须以 /posts/ 开头，例如 /posts/my-post.html）</label>
+            <input id="editUrl" placeholder="/posts/my-post.html" />
+            <div style="height:10px"></div>
+            <label>标签（用逗号分隔）</label>
+            <input id="editPostTags" placeholder="学习, 随笔" />
+            <div style="height:10px"></div>
+            <label>摘要（列表展示）</label>
+            <textarea id="editSummary" rows="5"></textarea>
+          </div>
+
 
           <div style="height:12px"></div>
           <div class="admin-buttons">
